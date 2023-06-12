@@ -31,8 +31,23 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <ul>
+        <li>
+          <h3>Product 1</h3>
+          <button>Add to cart</button>
+        </li>
+        <li>
+          <h3>Product 2</h3>
+          <button>Add to cart</button>
+        </li>
+      </ul>
+      <MyButton />
     </>
   );
 }
 
+function MyButton() {
+  return <button>I'm a button</button>;
+}
 export default App;
