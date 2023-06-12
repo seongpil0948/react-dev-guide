@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { select } from "d3";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -42,12 +44,41 @@ function App() {
           <button>Add to cart</button>
         </li>
       </ul>
-      <MyButton />
+      <ChartOne />
+
     </>
   );
 }
 
-function MyButton() {
-  return <button>I'm a button</button>;
+function ChartOne() {
+  const [data, setData] = useState([24, 30, 45, 70, 26]);
+  const svgRef = useRef(null);
+
+  useEffect(() => {
+    const svg = select(svgRef.current); // selection 객체
+
+    svg
+      .selectAll("circle")
+      .data(data)
+      .join(
+        (enter) => enter.append("circle"),
+        (update) => update.attr("class", "updated"),
+        (exit) => exit.remove()
+      )
+      .attr("r", (value) => value)
+      .attr("cx", (value) => value * 2)
+      .attr("cy", (value) => value * 2)
+      .attr("stroke", "red");
+  }, [data]);
+
+  return (
+    <>
+      <svg ref={svgRef}></svg>
+      <button onClick={() => {setData(data.map(el => el + 5))}}>increase + 5</button>
+      <button onClick={() => {setData(data.filter(el => el > 35))}}>filter circle r should gt 35</button>
+      <button onClick={() => {setData([...data, Math.round(Math.random() *100)])}}>add data</button>
+    </>
+  );
 }
+
 export default App;
