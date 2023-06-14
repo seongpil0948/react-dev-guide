@@ -32,28 +32,30 @@ function ChartOne() {
 
   return (
     <>
-      <svg ref={svgRef}></svg>
-      <button
-        onClick={() => {
-          setData(data.map((el) => el + 5));
-        }}
-      >
-        increase + 5
-      </button>
-      <button
-        onClick={() => {
-          setData(data.filter((el) => el > 35));
-        }}
-      >
-        filter circle r should gt 35
-      </button>
-      <button
-        onClick={() => {
-          setData([...data, Math.round(Math.random() * 100)]);
-        }}
-      >
-        add data
-      </button>
+      <svg style={{ display: "block" }} ref={svgRef} />
+      <div className="row">
+        <button
+          onClick={() => {
+            setData(data.map((el) => el + 5));
+          }}
+        >
+          increase + 5
+        </button>
+        <button
+          onClick={() => {
+            setData(data.filter((el) => el > 35));
+          }}
+        >
+          filter circle r should gt 35
+        </button>
+        <button
+          onClick={() => {
+            setData([...data, Math.round(Math.random() * 100)]);
+          }}
+        >
+          add data
+        </button>
+      </div>
     </>
   );
 }
