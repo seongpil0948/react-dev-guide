@@ -1,6 +1,27 @@
 # React Dev Guide
 - Typescript, React 기반 개발을 위해 사용을 위한 주요 가이드 모음
 
+## 기능 추가 진행 사항
+- [x] typescript 적용
+- [ ] 타입스크립트 예제 고도화
+- [ ] immer 추가
+- [ ] playwright 적용
+- [ ] 상태관리 라이브러리 논의
+- [ ] i18n 적용
+- [ ] tailwind 적용 여부 결정
+- [x] Scss 적용
+- [ ] 필요하지 않은 패키지 제거
+- [ ] [vue-dev-guide](https://github.com/socketbear/vue-dev-guide) 팔로우
+- [ ] 타 스타트킷 논의
+  - [ ] https://reactjs-kr.firebaseapp.com/community/starter-kits.html
+  - [ ] 스타트킷 중 next, tailwind, playwright, scss, 18n, typescript, theme, auto import 모두 만족하는 패키지도 없으며
+  일부 만족하되 불필요한 세팅이 많은 템플릿이 많아 직접 제작하는 방향으로 가야 할 것 같습니다.
+
+### 스타트킷 관련 문서 목록
+- https://github.com/dunky11/react-saas-template
+- https://reactjs-kr.firebaseapp.com/community/starter-kits.html
+- https://github.com/cruip/open-react-template/tree/master
+
 
 # 프레임 워크 기반 프로젝트 진행 계획
 [vue-dev-guide](https://github.com/socketbear/vue-dev-guide)를 이용한 프로세스 기반으로 진행. 
@@ -138,25 +159,6 @@ export const lightThemeOver: GlobalThemeOverrides = {
 
 
 
-
-## 기능 추가 진행 사항
-- [x] typescript 적용
-- [ ] playwright 적용
-- [ ] 상태관리 라이브러리 논의
-- [ ] i18n 적용
-- [ ] tailwind 적용 여부 결정
-- [x] Scss 적용
-- [ ] 필요하지 않은 패키지 제거
-- [ ] [vue-dev-guide](https://github.com/socketbear/vue-dev-guide) 팔로우
-- [ ] 타 스타트킷 논의
-  - [ ] https://reactjs-kr.firebaseapp.com/community/starter-kits.html
-  - [ ] 스타트킷 중 next, tailwind, playwright, scss, 18n, typescript, theme, auto import 모두 만족하는 패키지도 없으며
-  일부 만족하되 불필요한 세팅이 많은 템플릿이 많아 직접 제작하는 방향으로 가야 할 것 같습니다.
-
-### 스타트킷 관련 문서 목록
-- https://github.com/dunky11/react-saas-template
-- https://reactjs-kr.firebaseapp.com/community/starter-kits.html
-- https://github.com/cruip/open-react-template/tree/master
 
 ## 프레임워크의 추가 될 기본 기능들
 
